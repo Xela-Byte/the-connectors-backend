@@ -2,7 +2,6 @@ const cors = require('cors');
 require('dotenv').config();
 const express = require('express');
 const http = require('http');
-const fileUpload = require('express-fileupload');
 const { connectToDB } = require('./config/database');
 const bootstrap = require('./bootstrap');
 const { errorProcessing } = require('./middlewares/errorHandling');
@@ -23,7 +22,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(express.json());
-app.use(fileUpload({ useTempFiles: true }));
 app.use(router);
 
 const routes = require(`./routes/routes`);
