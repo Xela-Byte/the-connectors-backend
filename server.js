@@ -11,7 +11,13 @@ const router = express.Router();
 
 const server = http.createServer(app);
 
-const whitelist = ['http://localhost:5173', 'http://localhost:3000'];
+const whitelist = [
+  'http://localhost:5173',
+  'http://localhost:3000',
+  'https://www.blog.theconnectorsng.com',
+  'https://www.media.theconnectorsng.com',
+  'https://www.theconnectorsng.com',
+];
 
 app.use(
   cors({
