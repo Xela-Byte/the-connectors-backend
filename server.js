@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const whitelist = ['http://localhost:5173', 'http://localhost:3000'];
 
-server.use(
+app.use(
   cors({
     credentials: true,
     origin: (origin, callback) => {
