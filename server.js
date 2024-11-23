@@ -11,15 +11,23 @@ const router = express.Router();
 
 const server = http.createServer(app);
 
-const frontURL = 'http://localhost:3000';
+const whitelist = ['http://localhost:5173', 'http://localhost:3000'];
 
-const corsOptions = {
-  origin: frontURL,
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
+server.use(
+  cors({
+    credentials: true,
+    origin: (origin, callback) => {
+      if (!origin || whitelist.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    methods: ['GET', 'PUT', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders:
+      'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-xsrf-token',
+  }),
+);
 
 app.use(express.json());
 app.use(router);

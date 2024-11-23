@@ -15,4 +15,4 @@
 * coverImage - String
 * blogTitle
 * blogContent
-* blogImage - Array<String>
+* blogImage - string
