@@ -7,9 +7,9 @@
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
     "types": ["node"],
     "rootDir": "./",
+    "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
       "@/*": ["*"]
