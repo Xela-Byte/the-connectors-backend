@@ -16,4 +16,5 @@
     }
   },
   "include": ["../**/*.ts"]// Ensure Node.js types are included
+,"exclude": ["node_modules"]
 }
