@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/Xela-Byte/the-connectors-backend#readme",
   "dependencies": {
-    "@types/express": "^5.0.0",
     "@types/multer": "^1.4.12",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^2.5.1",
@@ -39,6 +38,7 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
     "@types/ftp": "^0.3.36",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"

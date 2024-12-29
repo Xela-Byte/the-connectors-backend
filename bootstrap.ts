@@ -12,3 +12,4 @@ const bootstrap = (router: Router, routes: Router): void => {
 };
 
 export default bootstrap;
+
