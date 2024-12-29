@@ -1,5 +1,7 @@
+// @ts-ignore
 import { Request, Response, NextFunction } from 'express';
 
+// @ts-ignore
 import multer, { StorageEngine } from 'multer';
 import path from 'path';
 import fs from 'fs';

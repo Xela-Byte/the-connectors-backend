@@ -1,3 +1,4 @@
+// @ts-ignore
 import express, { Request, Response, NextFunction } from 'express';
 
 import { default as propertiesController } from '../controllers/properties/propertiesController';

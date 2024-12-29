@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Router, Request, Response } from 'express';
 
 const bootstrap = (router: Router, routes: Router): void => {

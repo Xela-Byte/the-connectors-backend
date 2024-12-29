@@ -1,5 +1,6 @@
 import cors from 'cors';
 import dotenv from 'dotenv';
+// @ts-ignore
 import express, { Request, Response, NextFunction } from 'express';
 import http from 'http';
 import { connectToDB } from './src/config/database';
