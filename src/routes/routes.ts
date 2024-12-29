@@ -1,12 +1,8 @@
 import express, { Request, Response, NextFunction } from 'express';
-import {
-  uploadFile,
-  uploadMiddleware,
-} from '../controllers/media/mediaController';
 
 import { default as propertiesController } from '../controllers/properties/propertiesController';
 
-const router = express.Router();
+const router: any = express.Router();
 
 // Sample Code
 // router.post('/wallet/sendToWallet', sendToWallet);
@@ -46,9 +42,6 @@ router.put(
 router.delete('/properties/:propertyID', (req: Request, res: Response) => {
   propertiesController.deleteProperty(req, res);
 });
-
-// Media
-router.post('/uploadImage', uploadMiddleware, uploadFile);
 
 export default router;
 

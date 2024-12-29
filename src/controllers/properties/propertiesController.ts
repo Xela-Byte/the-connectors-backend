@@ -9,14 +9,14 @@ import { Property } from '../../models/Property';
 
 // Multer setup for file uploads
 const storage: StorageEngine = multer.diskStorage({
-  destination: (req, file, cb) => {
+  destination: (req: any, file: any, cb: any) => {
     const tempDir = path.join(__dirname, '../../tmp');
     if (!fs.existsSync(tempDir)) {
       fs.mkdirSync(tempDir, { recursive: true });
     }
     cb(null, tempDir); // Temporary storage before FTP upload
   },
-  filename: (req, file, cb) => {
+  filename: (req: any, file: any, cb: any) => {
     const sanitizedFileName = file.originalname.replace(/\s+/g, '_');
     const uniqueName = `${Date.now()}-${sanitizedFileName}`;
     cb(null, uniqueName);
