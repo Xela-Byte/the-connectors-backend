@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "build": "tsc",
+    "start": "node ./src/server.ts",
+    "dev": "nodemon"
   },
   "keywords": [],
   "author": "Xela",
@@ -33,5 +34,12 @@
     "nodemailer": "^6.9.16",
     "nodemon": "^3.1.7",
     "prettier": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/ftp": "^0.3.36",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
   }
 }
+
